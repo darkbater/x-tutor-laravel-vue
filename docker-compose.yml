@@ -1,0 +1,40 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+ app:
+   build:
+     context: .
+     dockerfile: Dockerfile
+   ports:
+     - '8080:80' # Пробрасывает порт 80 контейнера на порт 8080 хоста
+   volumes:
+     - .:/var/www/html
+     - ./vendor:/var/www/html/vendor
+     - ./node_modules:/var/www/html/node_modules
+   depends_on:
+     - db
+   environment:
+     - APP_ENV=local
+     - APP_DEBUG=true
+   networks:
+     - laravel
+# TODO Разобраться с подключением БД docker
+ db:
+   image: postgres:15
+   environment:
+     POSTGRES_DB: tutor
+     POSTGRES_USER: tutor
+     POSTGRES_PASSWORD: tutor
+   volumes:
+     - db_data:/var/lib/postgresql/data
+   ports:
+     - '5432:5432'
+   networks:
+     - laravel
+
+volumes:
+ db_data:
+
+networks:
+ laravel:
