@@ -16,6 +16,8 @@
         @inertiaHead
     </head>
     <body class="font-sans antialiased">
+        @include('layouts.main-menu')
+
         @inertia
     </body>
 </html>

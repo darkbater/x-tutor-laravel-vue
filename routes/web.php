@@ -1,13 +1,13 @@
 <?php
-
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
+    // return view('home');
     return Inertia::render('Tutor');
-});
+})->name('home');
 
 # TODO Маршруты преподавателя
 
@@ -18,7 +18,6 @@ Route::get('/', function () {
 # TODO Маршруты зарегистрированного польхователя
 
 # TODO Маршруты гостя
-
 
 # От breeze 
 # TODO Переделать под структуру приложения
