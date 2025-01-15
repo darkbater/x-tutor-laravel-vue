@@ -1,8 +1,9 @@
     <nav class="menu">
 	<ul class="menu-list">
             <li class="menu-item"><div class="menu-item-round"></div><a class="menu-item" href="{{ route('home') }}"> [ Главная ] </a></li>
+            <li class="menu-item"><div class="menu-item-round"></div><a class="menu-item" href="{{ route('tutor') }}"> [ Учитель ] </a></li>
         </ul>
-		
+
         <!-- Блок аутентификации -->
         <div class="auth-block">
 			@guest

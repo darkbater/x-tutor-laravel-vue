@@ -12,11 +12,11 @@
 
         <!-- Scripts -->
         @routes
-        @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
-        @inertiaHead
+        {{-- #TODO Как временное решение - тут было заккоментено! Работает только с вуе компонентами. Решить! --}}
+        {{-- @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"]) --}}
+
     </head>
     <body class="font-sans antialiased">
         @include('layouts.main-menu')
-        @inertia
     </body>
 </html>

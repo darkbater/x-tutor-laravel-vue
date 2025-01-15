@@ -1,3 +1,3 @@
 <template>
-    Hi, im Tutor.
+    Hi, im Tutor, vue.
 </template>

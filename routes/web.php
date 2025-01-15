@@ -5,9 +5,14 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    // return view('home');
+    return view('home');
     return Inertia::render('Tutor');
 })->name('home');
+
+Route::get('/tutor', function () {
+    // return view('home');
+    return Inertia::render('Tutor');
+})->name('tutor');
 
 # TODO Маршруты преподавателя
 
