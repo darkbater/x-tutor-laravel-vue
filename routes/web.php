@@ -6,13 +6,22 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return Inertia::render('Tutor');
 });
+
+# TODO Маршруты преподавателя
+
+# TODO Маршруты админитратора
+
+# TODO Маршруты студента
+
+# TODO Маршруты зарегистрированного польхователя
+
+# TODO Маршруты гостя
+
+
+# От breeze 
+# TODO Переделать под структуру приложения
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
